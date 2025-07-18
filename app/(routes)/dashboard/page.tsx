@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import HistoryList from "./_components/HistoryList";
 import DoctorsList from "./_components/DoctorsList";
+import NewSessionDialog from "./_components/NewSessionDialog";
 
 export default function Workspace() {
   return (
@@ -9,7 +10,9 @@ export default function Workspace() {
         <h2 className="text-2xl font-bold">My Dashboard</h2>
         <Button>+ Consult with Doctor</Button>
       </div>
+
       <HistoryList />
+      <NewSessionDialog />
       <DoctorsList />
     </div>
   );

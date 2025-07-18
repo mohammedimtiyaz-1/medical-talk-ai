@@ -17,8 +17,7 @@ export default function HistoryList() {
           width={200}
           height={200}
         />
-        <h2>Lets talk right now. Doctor is waiting..!</h2>
-        <Button>Lets start a consultation</Button>
+        <h2> Doctor is Available now..!</h2>
       </div>
     );
   }
