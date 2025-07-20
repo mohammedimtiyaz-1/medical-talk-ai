@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { UserButton, useUser } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 
 const menuOptions = [
@@ -26,15 +27,11 @@ const menuOptions = [
     name: "Pricing",
     path: "/dashboard/billing",
   },
-  {
-    id: 5,
-    name: "Profile",
-    path: "/profile",
-  },
 ];
 
 const Navbar = () => {
   const { user } = useUser();
+
   return (
     <nav className="bg-neutral-100 flex w-full items-center justify-between  border-b border-neutral-200 px-1 md:px-2   shadow px-6 md:px-12  lg:px-16 py-4 dark:border-neutral-800">
       <div className="flex items-center gap-2">

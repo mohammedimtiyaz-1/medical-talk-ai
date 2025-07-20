@@ -95,9 +95,9 @@ const Footer = () => {
             <div className="flex items-center space-x-6 text-sm text-neutral-500 dark:text-neutral-500">
               <span>Made with ❤️ for better healthcare</span>
               <span>•</span>
-              <span>HIPAA Compliant</span>
+              <span> Compliant</span>
               <span>•</span>
-              <span>24/7 Support</span>
+              <span>Support</span>
             </div>
           </div>
         </div>
