@@ -12,6 +12,7 @@ import {
 import Provider from "./provider";
 import { Toaster } from "@/components/ui/sonner";
 import Footer from "./_components/Footer";
+import AppHeader from "./(routes)/dashboard/_components/AppHeader";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
+          <AppHeader />
           <Provider>
             {children}
             <Toaster />
