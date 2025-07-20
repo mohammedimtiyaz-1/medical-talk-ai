@@ -15,7 +15,7 @@ import HistoryTable from "./HistoryTable";
  */
 function HistoryList({ historyList }: { historyList: SessionDetail[] }) {
   // 📥 Fetch all consultation sessions from the backend
-  console.log({ historyList });
+
   return (
     <div className="mt-10">
       {/* 📦 If no history, show empty state UI */}

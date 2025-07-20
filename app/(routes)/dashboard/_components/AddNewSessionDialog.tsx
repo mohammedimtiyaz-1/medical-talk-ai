@@ -44,7 +44,7 @@ function AddNewSessionDialog() {
   // 📥 Get all previous session records
   const GetHistoryList = async () => {
     const result = await axios.get("/api/session-chat?sessionId=all");
-    console.log(result.data);
+
     setHistoryList(result.data);
   };
 
@@ -54,8 +54,7 @@ function AddNewSessionDialog() {
     const result = await axios.post("/api/suggest-doctors", {
       notes: note,
     });
-
-    console.log(result.data);
+    console.log("--- result of suggested docler", result);
     setSuggestedDoctors(result.data);
     setLoading(false);
   };
@@ -68,7 +67,6 @@ function AddNewSessionDialog() {
       selectedDoctor: selectedDoctor,
     });
 
-    console.log(result.data);
     if (result.data?.sessionId) {
       // 🔁 Redirect to the new session page
       router.push("/dashboard/medical-agent/" + result.data.sessionId);
