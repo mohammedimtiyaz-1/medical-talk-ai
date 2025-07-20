@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useState } from "react";
+import NewSessionDialog from "./NewSessionDialog";
 
 export default function HistoryList() {
   const [historyList, setHistoryList] = useState<string[]>([]);
@@ -18,6 +19,7 @@ export default function HistoryList() {
           height={200}
         />
         <h2> Doctor is Available now..!</h2>
+        <NewSessionDialog />
       </div>
     );
   }

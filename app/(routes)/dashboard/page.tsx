@@ -12,7 +12,7 @@ export default function Workspace() {
       </div>
 
       <HistoryList />
-      <NewSessionDialog />
+
       <DoctorsList />
     </div>
   );

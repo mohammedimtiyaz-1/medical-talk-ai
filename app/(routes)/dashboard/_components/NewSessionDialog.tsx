@@ -22,7 +22,9 @@ export default function DialogDemo() {
     <Dialog>
       <form>
         <DialogTrigger asChild>
-          <Button>Lets start a consultation</Button>
+          <Button className="flex items-center justify-center">
+            Lets start a consultation
+          </Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>
