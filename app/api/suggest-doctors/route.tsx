@@ -28,7 +28,6 @@ export async function POST(req: NextRequest) {
       .replace("```", "");
     const JSONResp = JSON.parse(Resp);
 
-    console.log("---- suggested doctor", { JSONResp });
     return NextResponse.json(JSONResp);
   } catch (e) {
     console.error(e);

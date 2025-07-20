@@ -55,7 +55,6 @@ export async function POST(req: NextRequest) {
       .replace("```json", "")
       .replace("```", "");
     const JSONResp = JSON.parse(Resp);
-    console.log("------", { JSONResp });
 
     // Save to Database
     const result = await db
@@ -65,8 +64,6 @@ export async function POST(req: NextRequest) {
         conversation: messages,
       })
       .where(eq(SessionChatTable.sessionId, sessionId));
-
-    console.log("-------------------  session related data ", { result });
 
     return NextResponse.json(JSONResp);
   } catch (e) {

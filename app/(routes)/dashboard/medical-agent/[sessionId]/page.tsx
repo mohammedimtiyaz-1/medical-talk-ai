@@ -140,8 +140,6 @@ function MedicalVoiceAgent() {
     // Generate consultation report based on chat messages
     const result = await GenerateReport();
 
-    console.log("----------- report generated", { result });
-
     if (!vapiInstance) return;
 
     // Stop the Vapi call and remove event listeners
