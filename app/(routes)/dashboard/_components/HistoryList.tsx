@@ -31,7 +31,7 @@ function HistoryList({ historyList }: { historyList: SessionDetail[] }) {
           <p>It looks like you haven't consulted with any doctors yet.</p>
 
           {/* ➕ Trigger to start a new consultation */}
-          <AddNewSessionDialog />
+          <AddNewSessionDialog setSuggestedDoctors={() => {}} />
         </div>
       ) : (
         // 📊 Show consultation history table

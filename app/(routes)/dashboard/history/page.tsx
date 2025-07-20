@@ -15,8 +15,9 @@ async function GetHistoryList() {
     result = await db
       .select()
       .from(SessionChatTable)
-      //@ts-ignore
+
       .where(
+        //@ts-ignore
         eq(SessionChatTable.createdBy, user?.primaryEmailAddress?.emailAddress)
       )
       .orderBy(desc(SessionChatTable.id));
@@ -32,7 +33,9 @@ async function GetHistoryList() {
 
 async function History() {
   const result = await GetHistoryList();
-  const historyList: SessionDetail[] = result;
+  //@ts-ignore
+  const historyList: SessionDetail[] = result ?? [];
+
   return <HistoryList historyList={historyList} />;
 }
 
