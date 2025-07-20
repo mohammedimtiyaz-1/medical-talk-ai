@@ -24,8 +24,8 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-white dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-neutral-200 dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-4 lg:px-8 py-2 md:py-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* App Branding */}
           <div className="col-span-1 md:col-span-2">
