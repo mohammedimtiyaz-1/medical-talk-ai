@@ -1,44 +1,39 @@
-"use client";
+"use client"
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+import { useUser } from '@clerk/nextjs';
+import { UserDetailContext } from '@/context/UserDetailContext';
 
-import { UserDetailContext } from "@/context/UserDetailContext";
-import { useUser } from "@clerk/nextjs";
-import axios from "axios";
-import { useEffect, useState } from "react";
-
-export type UserDetail = {
-  name: string;
-  email: string;
-  credits: number;
-};
-
-export default function Provider({ children }: { children: React.ReactNode }) {
-  const user = useUser();
-  const [userDetail, setUserDetail] = useState<UserDetail | undefined>();
-
-  useEffect(() => {
-    user && createNewUser();
-  }, [user]);
-  const createNewUser = async () => {
-    // Logic to create a new user
-
-    const result = await fetch("/api/users", { method: "POST" });
-    const res = await result.json();
-    if (!user) {
-      setUserDetail({
-        name: res.name,
-        email: res.email,
-        credits: res.credits,
-      });
-    }
-    console.log("success to fetch", res);
-  };
-
-  return (
-    <div>
-      <UserDetailContext.Provider value={userDetail}>
-        {children}
-      </UserDetailContext.Provider>
-      /
-    </div>
-  );
+export type UsersDetail = {
+    name: string,
+    email: string,
+    credits: number
 }
+
+function Provider({
+    children,
+}: Readonly<{
+    children: React.ReactNode;
+}>) {
+
+    const { user } = useUser();
+    const [userDetail, setUserDetail] = useState<any>();
+    useEffect(() => {
+        user && CreateNewUser();
+    }, [user])
+
+    const CreateNewUser = async () => {
+        const result = await axios.post('/api/users');
+        console.log(result.data);
+        setUserDetail(result.data);
+    }
+
+    return (
+        <div>
+            <UserDetailContext.Provider value={{ userDetail, setUserDetail }}>
+                {children}
+            </UserDetailContext.Provider></div>
+    )
+}
+
+export default Provider

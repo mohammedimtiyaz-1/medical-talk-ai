@@ -1,19 +1,22 @@
-import { Button } from "@/components/ui/button";
-import HistoryList from "./_components/HistoryList";
-import DoctorsList from "./_components/DoctorsList";
-import NewSessionDialog from "./_components/NewSessionDialog";
+import React from 'react'
+import HistoryList from './_components/HistoryList'
+import { Button } from '@/components/ui/button'
+import DoctorsAgentList from './_components/DoctorsAgentList'
+import AddNewSessionDialog from './_components/AddNewSessionDialog'
 
-export default function Workspace() {
-  return (
-    <div className="flex flex-col gap-4 p-4 sm:p-6 md:p-8">
-      <div className="flex items-center justify-between mb-4">
-        <h2 className="text-2xl font-bold">My Dashboard</h2>
-        <Button>+ Consult with Doctor</Button>
-      </div>
+function Dashboard() {
+    return (
+        <div>
+            <div className='flex justify-between items-center'>
+                <h2 className='font-bold text-2xl'>My Dashboard</h2>
+                <AddNewSessionDialog />
 
-      <HistoryList />
+            </div>
+            <HistoryList />
 
-      <DoctorsList />
-    </div>
-  );
+            <DoctorsAgentList />
+        </div>
+    )
 }
+
+export default Dashboard
