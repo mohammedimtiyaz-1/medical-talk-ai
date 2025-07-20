@@ -211,15 +211,17 @@ function MedicalVoiceAgent() {
           <p className="text-sm text-gray-400">AI Medical Voice Agent</p>
 
           {/* Show last 4 finalized messages and live transcript */}
-          <div className="mt-12 overflow-y-auto flex flex-col items-center px-10 md:px-28 lg:px-52 xl:px-72">
-            {messages.slice(-4).map((msg, index) => (
-              <h2 className="text-gray-400 p-2" key={index}>
-                {msg.role}: {msg.text}
+          <div className="mt-12 overflow-y-auto flex flex-col px-4 md:px-14 lg:px-18 xl:px-24">
+            {messages.slice(-3).map((msg, index) => (
+              <h2 className="text-gray-400 p-2 text-left" key={index}>
+                <span className="font-bold capitalize">{msg.role}</span>:{":"}
+                <span className="italic">{msg.text}</span>
               </h2>
             ))}
             {liveTranscript && (
-              <h2 className="text-lg">
-                {currentRole} : {liveTranscript}
+              <h2 className="text-lg text-left">
+                <span className="font-bold capitalize">{currentRole} </span>:{" "}
+                <span className="italic">{liveTranscript}</span>
               </h2>
             )}
           </div>

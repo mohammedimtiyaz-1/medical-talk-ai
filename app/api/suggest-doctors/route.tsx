@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
           content:
             "User Notes/Symptoms:" +
             notes +
-            ", Depends on user notes and symptoms, Please suggest list of doctors , Return Object in JSON only",
+            ", Depends on user notes and symptoms, Please suggest list of doctors , Return Object in JSON in the format with the field 1)'additionInfo': suggest a summary  brief info what could be the issue 2) 'suggestedDoctors': list of doctor from the AIDoctorAgent list. Fields name should be as defined ",
         },
       ],
     });
