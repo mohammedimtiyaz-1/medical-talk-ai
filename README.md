@@ -2,6 +2,12 @@
 
 An AI-powered medical voice assistant that allows users to have real-time voice conversations with specialized AI doctors, generate medical consultation reports, and manage their health sessions.
 
+## 🌐 Live Demo
+
+Access the application here: [https://medical-talk-ai.vercel.app/](https://medical-talk-ai.vercel.app/)
+
+An AI-powered medical voice assistant that allows users to have real-time voice conversations with specialized AI doctors, generate medical consultation reports, and manage their health sessions.
+
 ## 🚀 Features
 
 - **Voice Conversations**: Real-time voice interactions with AI medical specialists
@@ -249,25 +255,3 @@ npm run build
 # Start production server
 npm start
 ```
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🆘 Support
-
-If you encounter any issues or have questions:
-
-1. Check the [Issues](https://github.com/your-repo/issues) page
-2. Create a new issue with detailed information
-3. Contact the development team
-
-**Note**: This application is for educational and demonstration purposes. It should not be used as a replacement for professional medical advice. Always consult with qualified healthcare professionals for medical concerns.
